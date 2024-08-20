@@ -1,0 +1,249 @@
+/* Basic Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  color: #333;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* GitHub Corner */
+.github-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+
+/* Header Styles */
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  text-align: center;
+  color: #0074d9;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-top: 0;
+}
+
+/* Difficulty Level Styles */
+#difficulty-level {
+  margin: 1em 0;
+  text-align: center;
+  font-size: 16pt;
+}
+
+#difficulty {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  border-radius: 12px;
+  border: 2px solid inherit;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Difficulty Levels */
+#difficulty.easy {
+  background-color: #ffdc00;
+  color: black;
+}
+
+#difficulty.medium {
+  background-color: #0074d9;
+  color: white;
+}
+
+#difficulty.hard {
+  background-color: #ff4136;
+  color: white;
+}
+
+/* Display Pattern Styles */
+#display-pattern {
+  display: inline-block;
+  font-family: "Courier New", Courier, monospace;
+  margin: 20px 0;
+}
+
+#display-pattern span,
+.display-example span {
+  display: inline-block;
+  border: 2px solid #0074d9;
+  border-radius: 8px;
+  padding: 1em;
+  margin: 0.5em;
+  background: linear-gradient(145deg, rgba(221, 221, 221, 0.2), white);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+#display-pattern span:hover,
+.display-example span:hover {
+  transform: scale(1.05);
+}
+
+/* Number Input Styles */
+#next-number {
+  width: 3em;
+  border: 2px solid #0074d9;
+  font-size: 16pt;
+  border-radius: 8px;
+  padding: 1em 0.5em;
+  transition: all 0.3s ease-in;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#next-number:focus {
+  outline: none;
+  border-color: #ff4136;
+  box-shadow: 0 0 8px rgba(255, 65, 54, 0.5);
+}
+
+/* Button Styles */
+.button {
+  outline: none;
+  background: none;
+  width: 12em;
+  border: 2px solid #0074d9;
+  color: white;
+  padding: 10pt;
+  border-radius: 8px;
+  background-color: #0074d9;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  font-size: 14pt;
+  margin-bottom: 20px;
+}
+
+.button:hover {
+  background: white;
+  color: #0074d9;
+  box-shadow: 0 4px 8px rgba(0, 116, 217, 0.2);
+}
+
+/* Wins and Tries Container */
+#counter-container {
+  text-align: center;
+  font-size: 14pt;
+  color: #0074d9;
+  margin-bottom: 20px;
+}
+
+#counter-container div {
+  margin: 0.5em 0;
+  font-weight: bold;
+}
+
+#wins:before {
+  content: "Wins: ";
+}
+
+#total-tries:before {
+  content: "Total tries: ";
+}
+
+/* Instructions Container */
+#how-to-container {
+  border: 2px solid black;
+  padding: 15px;
+  width: 30%;
+  font-size: 14pt;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+#how-to h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #0074d9;
+  font-weight: bold;
+}
+
+#hide-instructions {
+  text-decoration: none;
+  color: #d96500;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease-in;
+}
+
+#hide-instructions:hover {
+  color: #ff851b;
+}
+
+#how-to-container.hidden #how-to {
+  height: 0;
+  overflow: hidden;
+}
+
+#how-to-container.hidden #hide-instructions:before {
+  content: "Show ";
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 992px) {
+  h1 {
+    margin: 0.5em 0;
+  }
+
+  #how-to-container {
+    position: relative;
+    width: auto;
+    margin-bottom: 0.5em;
+    box-shadow: none;
+    border-radius: 8px;
+  }
+
+  #display-pattern-container {
+    display: block;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  #button-container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  #result-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/* Animation for GitHub Corner */
+@keyframes octocat-wave {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  20%,
+  60% {
+    transform: rotate(-25deg);
+  }
+  40%,
+  80% {
+    transform: rotate(10deg);
+  }
+}
