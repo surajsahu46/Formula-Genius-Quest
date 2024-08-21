@@ -75,3 +75,9 @@ Open a pull request.
 
 Any enhancements, bug fixes, or additional features are greatly appreciated!
 
+License 📝
+
+This project is licensed under the Apache License Version 2.0.
+
+Author 🖋️
+Suraj Sahu - GitHub - sahu.suraj.3141@gmail.com
